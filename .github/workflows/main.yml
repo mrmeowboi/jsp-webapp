@@ -1,0 +1,13 @@
+on: push
+name: Main Workflow
+jobs:
+  sonarQubeTrigger:
+    name: SonarQube Trigger
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: SonarQube Scan
+      uses: kitabisa/sonarqube-action@v1.1.0
+      with:
+        host: https://35a5-2409-4071-e84-8d1-95ae-48d-bb37-bab8.ngrok.io
+        login: 0a52cc60260bb7a033becef8b7fd71e4329123fe
